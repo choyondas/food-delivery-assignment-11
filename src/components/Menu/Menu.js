@@ -15,7 +15,7 @@ const Menu = () => {
 
 
             <div className="available-item">
-                <h2 className="text-center text-white p-5 m-5">You can only buy Burger from here.</h2>
+
 
 
 

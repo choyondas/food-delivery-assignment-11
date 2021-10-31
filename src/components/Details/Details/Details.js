@@ -10,14 +10,15 @@ const Details = () => {
 
 
     useEffect(() => {
-        const url = `http://localhost:5000/services/${id}`;
+        const url = `https://ghostly-labyrinth-89425.herokuapp.com/services/${id}`;
         fetch(url)
             .then(res => res.json())
             .then(data => setUser(data))
     }, []);
     return (
         <div className="container">
-            <h2 className="text-center fw-bold p-4">{user.name}</h2>
+            <br /><br />
+            <h2 className="text-center fw-bold text-black ">{user.name}</h2>
             <div class="card mb-3">
                 <img src={user.url} class="card-img-top" alt="..." />
                 <div class="card-body">
