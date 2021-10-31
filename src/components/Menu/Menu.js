@@ -19,7 +19,7 @@ const Menu = () => {
 
 
 
-                <div className="menu-link">
+                {/* <div className="menu-link">
 
 
                     <Link className="menu-item" to='/toasts'>
@@ -37,7 +37,7 @@ const Menu = () => {
                     <Link className="menu-item" to='desserts'>
                         DESSERTS
                     </Link>
-                </div>
+                </div> */}
 
                 <div className="w-75 mx-auto">
 
