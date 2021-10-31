@@ -1,0 +1,151 @@
+.top-nav{
+  margin-bottom: 100px;
+}
+.total-nav{
+  background-color:#029d9b ;
+}
+
+.carousel-item {
+    
+    
+    background: no-repeat center center scroll;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+  }
+  .nav{
+    text-decoration: none;
+    padding:20px;
+    font-size: 20px;
+    font-weight: bold;
+
+    position: relative;
+    width: 33.333%;
+    display: table-cell;
+    text-align: center;
+    color: #949494;
+    text-decoration: none;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: bold;
+    padding: 10px 20px;
+    transition: 0.2s ease color;
+  }
+
+  .nav:before, .nav:after
+{
+    content: "";
+    position: absolute;
+    border-radius: 50%;
+    transform: scale(0);
+    transition: 0.2s ease transform;
+}
+  .nav:before
+  {
+      top: 0;
+      left: 10px;
+      width: 6px;
+      height: 6px;
+  }
+  .nav:after
+{
+    top: 5px;
+    left: 18px;
+    width: 4px;
+    height: 4px
+}
+
+
+.nav:nth-child(1):before
+{
+    background-color: yellow;
+}
+
+.nav:nth-child(1):after
+{
+    background-color: red;
+}
+
+.nav:nth-child(2):before
+{
+    background-color: #00e2ff;
+}
+
+.nav:nth-child(2):after
+{
+    background-color: #89ff00;
+}
+
+.nav:nth-child(3):before
+{
+    background-color: purple;
+}
+
+.nav:nth-child(3):after
+{
+    background-color: palevioletred;
+}
+.nav:nth-child(4):before
+{
+    background-color: rgb(226, 206, 28);
+}
+
+.nav:nth-child(4):after
+{
+    background-color: rgb(51, 113, 228);
+}
+.nav:nth-child(5):before
+{
+    background-color: rgb(235, 188, 102);
+}
+
+.nav:nth-child(5):after
+{
+    background-color: palevioletred;
+}
+
+
+
+.nav:hover
+{
+    color: #12c5c3;
+}
+
+.nav:hover:before, .nav:hover:after
+{
+    transform: scale(1);
+}
+
+.nav:nth-child(1):hover ~ #indicator
+{
+    background: linear-gradient(130deg, yellow, red);
+}
+
+
+
+  /* .nav:hover{
+    text-decoration: underline;
+  } */
+  .btn-out{
+    padding: 0px 20px;
+    border-radius: 10px;
+  }
+
+
+
+
+
+  .title{
+    
+    display: flex;
+    align-items: center;
+    justify-content: left;
+  }
+  .txt-nav{
+    margin-left: -208px;
+    font-size: 30px;
+    font-weight: bold;
+  }
+  .head-nav{
+    color: #12c5c3;
+  }

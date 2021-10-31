@@ -1,0 +1,13 @@
+.about{
+    padding-top: 100px;
+    display: flex;
+    
+    width: 75%;
+    margin: auto;
+    justify-content: center;
+    align-items: center;
+}
+.heading-1{
+    font-size: 60px;
+    font-weight: bold;
+}

@@ -1,0 +1,102 @@
+.services-section{
+    width: 75%;
+    margin: auto;
+    
+}
+.ser{
+  font-size: 50px;
+  padding: 15px;
+  font-weight: bold;
+  color: white;
+  margin-top: 38px;
+}
+.btn-deta{
+  font-size: 18px;
+  color: white;
+  text-decoration: none;
+  padding: 10px;
+  border-radius: 4px;
+}
+.div-btn{
+  padding: 10px;
+  border-radius: 6px;
+}
+.div-btn:hover{
+  background-color: white;
+  color:blue;
+}
+
+.service-div:hover{
+box-shadow: 3px 3px 30px rgb(185, 182, 182);
+background-color: #12c5c3;
+color:white ;
+}
+.service-div{
+    border-radius: 10px;
+    border: 1px solid white;
+    text-align: center;
+    color: white;
+}
+
+.detaisl-btn a {
+    text-decoration: none;
+    border: 3px solid rgb(172, 224, 240);
+    color: transparent;
+    padding: 10px 10px;
+    border-radius: 10px;
+    font-size: 20px;
+    font-family: sans-serif;
+    letter-spacing: 5px;
+    transition: all 0.5s;
+    position: relative;
+  }
+  .detaisl-btn a:before {
+    content: "details";
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: rgb(255, 255, 255);
+    border-radius: 9px;
+    background: rgb(34, 34, 34);
+    font-size: 20px;
+    top: 0;
+    left: 100%;
+    font-family: sans-serif;
+    letter-spacing: 5px;
+    transition: all 1s;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    transform: scale(0) rotatey(0);
+    opacity: 0;
+  }
+  .detaisl-btn a:hover:before {
+    transform: scale(1) rotatey(360deg);
+    left: 0;
+    opacity: 1;
+  }
+  .detaisl-btn a:after {
+    content: "details";
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: rgb(255, 255, 255);
+    background: #9fe9f5;
+    font-size: 20px;
+    top: 0;
+    left: 0;
+    font-family: sans-serif;
+    letter-spacing: 5px;
+    transition: all 1s;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    transform: scale(1) rotatey(0);
+    opacity: 1;
+  }
+  .detaisl-btn a:hover:after {
+    transform: scale(0) rotatey(360deg);
+    left: -100%;
+    opacity: 0;
+  }
+  

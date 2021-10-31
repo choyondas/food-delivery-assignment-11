@@ -1,0 +1,22 @@
+.special-1{
+    background-image:url('http://ecotourism-world.com/wp-content/uploads/2020/07/anna-pelzer-IGfIGP5ONV0-unsplash-1.jpg') ;
+    background-size: cover;
+    height:300px;
+    width:300px;
+}
+.special-2{
+    background-image:url('https://owner.com/wp-content/uploads/2020/01/food-delivery-612x345.jpg') ;
+    background-size: cover;
+    height:300px;
+    width:300px;
+}
+.special-3{
+    background-image:url('https://5.imimg.com/data5/OE/HL/GH/SELLER-8900435/3836-500x500.jpg') ;
+    background-size: cover;
+    height:300px;
+    width:300px;
+}
+.text-special{
+    font-size:50px;
+    font-weight: bold;
+}

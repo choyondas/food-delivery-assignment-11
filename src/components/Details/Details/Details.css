@@ -1,0 +1,21 @@
+.details-div{
+    padding-top: 100px;
+
+}
+.back{
+    width: 100%;
+margin-top:50px
+}
+
+
+.back-det{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color:rgb(255, 255, 255);
+    background-image: url('https://coolbackgrounds.io/images/backgrounds/index/compute-ea4c57a4.png');
+}
+.title-des{
+    font-size: 40px;
+    font-weight: bold;
+}
