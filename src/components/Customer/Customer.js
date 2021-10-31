@@ -1,9 +1,34 @@
 import React from 'react';
 import { useForm } from "react-hook-form";
+import { Link } from 'react-router-dom';
 import "./Customer.css"
 const Customer = () => {
     const { register, reset, handleSubmit, watch, formState: { errors } } = useForm();
-    const onSubmit = data => console.log(data);
+
+
+    const onSubmit = data => {
+        // const savedCart = getStoredCart();
+        // data.order = savedCart;
+        console.log(data);
+        fetch('https://ghostly-labyrinth-89425.herokuapp.com/placeorder', {
+            method: 'POST',
+            headers: {
+                'content-type': 'application/json'
+            },
+            body: JSON.stringify(data)
+        })
+            .then(res => res.json())
+            .then(data => {
+                if (data.insertedId) {
+                    alert('Successfully added the user.')
+                    reset()
+                }
+            })
+    };
+
+
+
+
     return (
         <div>
             <h2 className="text-center">customer Information</h2>
@@ -23,13 +48,22 @@ const Customer = () => {
                         {errors.exampleRequired && <span>This field is required</span>}
                     </div>
                     <br />
-                    <div className="text-center">
-                        <button className="btn-primary">
-                            Submit
-                        </button>
+                    <div className="text-center ">
+                        <div className="m-2">
+                            <button className="btn-primary">
+                                Submit
+                            </button>
+                        </div>
+
+                        {/* <Link to="/placeholder">
+                            <button className="btn-primary">see the customer information</button>
+                        </Link> */}
                     </div>
                 </form>
             </div>
+
+
+
         </div>
     );
 };
