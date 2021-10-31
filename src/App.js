@@ -21,6 +21,7 @@ import Burger from './components/Food/Burger/Burger';
 import BuyNow from './components/BuyNow/BuyNow';
 import Address from './components/Address/Address';
 import Buying from './components/Buying/Buying';
+import OurRecipes from './components/OurRecipes/OurRecipes';
 
 
 
@@ -46,6 +47,10 @@ function App() {
 
             <Route path='/services'>
               <Services></Services>
+
+            </Route>
+            <Route path='/recipes'>
+              <OurRecipes></OurRecipes>
 
             </Route>
 
