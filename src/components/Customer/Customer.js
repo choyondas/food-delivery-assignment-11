@@ -1,24 +1,33 @@
 import React from 'react';
 import { useForm } from "react-hook-form";
+import "./Customer.css"
 const Customer = () => {
-    const { register, handleSubmit, watch, formState: { errors } } = useForm();
+    const { register, reset, handleSubmit, watch, formState: { errors } } = useForm();
     const onSubmit = data => console.log(data);
     return (
         <div>
-            <h2>customer</h2>
+            <h2 className="text-center">customer Information</h2>
 
 
-            <div className="w-50 mx-auto">
+            <div className="w-50 mx-auto p-5 customer">
                 <form onSubmit={handleSubmit(onSubmit)}>
 
-                    <input  {...register("example")} />
-                    <br />
+                    <div className="text-center cus-item">
+                        <input className="p-2 m-2 cus-item" placeholder="Your Name"  {...register("name")} />
+                        <br />
+                        <input className="p-2 m-2 cus-item" placeholder="Your City"  {...register("city")} />
+                        <br />
+                        <input className="p-2 m-2 cus-item" placeholder="Your Phone"  {...register("phone")} />
+                        <br />
 
-                    <input {...register("exampleRequired", { required: true })} />
+                        {errors.exampleRequired && <span>This field is required</span>}
+                    </div>
                     <br />
-                    {errors.exampleRequired && <span>This field is required</span>}
-                    <br />
-                    <input classname="btn btn-primary" type="submit" />
+                    <div className="text-center">
+                        <button className="btn-primary">
+                            Submit
+                        </button>
+                    </div>
                 </form>
             </div>
         </div>

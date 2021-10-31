@@ -94,11 +94,11 @@ const Services = () => {
 
 
 
-                            {user?.email && <button onClick={() => handleDelete(service._id)} className='btn-danger text-white m-2'>Delete</button>}
+                            {/* {user?.email && <button onClick={() => handleDelete(service._id)} className='btn-danger text-white m-2'>Delete</button>}
 
                             {user?.email && <Link to={`update/${service._id}`}>
                                 <button className='btn-warning text-white m-2'>Update</button>
-                            </Link>}
+                            </Link>} */}
                             {/* {user?.email &&
                                 <button className='btn-primary text-white div-btn'>
                                     <Link className='btn-deta' to={`/services/${service._id}`}> Buy Now</Link>
