@@ -22,6 +22,8 @@ import BuyNow from './components/BuyNow/BuyNow';
 import Address from './components/Address/Address';
 import Buying from './components/Buying/Buying';
 import OurRecipes from './components/OurRecipes/OurRecipes';
+import PlaceOrder from './components/PlaceOrder/PlaceOrder';
+import Customer from './components/Customer/Customer';
 
 
 
@@ -49,6 +51,12 @@ function App() {
               <Services></Services>
 
             </Route>
+
+            <Route path='/customer'>
+              <Customer></Customer>
+
+            </Route>
+
             <Route path='/recipes'>
               <OurRecipes></OurRecipes>
 
@@ -63,10 +71,15 @@ function App() {
 
             </Route>
 
-            <Route path='/burgers'>
+            <PrivateRoute path='/burgers'>
               <Burger></Burger>
+            </PrivateRoute>
 
-            </Route>
+
+            <PrivateRoute path='/placeorder'>
+              <PlaceOrder></PlaceOrder>
+
+            </PrivateRoute>
             <Route path='/login'>
               <Login></Login>
 
@@ -74,9 +87,9 @@ function App() {
             <Route path='/register'>
               <Register></Register>
             </Route>
-            <Route path='/addServices'>
+            <PrivateRoute path='/addServices'>
               <AddServices></AddServices>
-            </Route>
+            </PrivateRoute>
 
             <Route path='/address'>
               <Address></Address>
@@ -103,7 +116,7 @@ function App() {
 
 
 
-            <PrivateRoute path='/details/:serviceId'>
+            <PrivateRoute path='/details/:id'>
               <Details></Details>
             </PrivateRoute>
 

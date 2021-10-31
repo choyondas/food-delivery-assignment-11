@@ -36,15 +36,15 @@ const BuyNow = () => {
 
 
     return (
-        <div>
-            <h2 className="text-center p-4">here is booking id: {id}</h2>
+        <div className="container">
+            <h2 className="text-center p-4 fw-bold">{burge.name}</h2>
 
             <div class="card mb-3">
                 <img class="card-img-top" src={burge.url} alt="Card image cap" />
                 <div class="card-body">
                     <h5 class="card-title">{burge.name}</h5>
                     <p class="card-text">{burge.description}</p>
-                    <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                    <p class="card-text"><small class="text-muted">stock limited</small></p>
                 </div>
             </div>
 

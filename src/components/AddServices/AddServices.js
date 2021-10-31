@@ -12,6 +12,7 @@ const AddServices = () => {
         })
             .then(res => res.json())
             .then(result => console.log(result))
+        reset();
     };
     return (
         <div className="p-5 m-5 text-center">

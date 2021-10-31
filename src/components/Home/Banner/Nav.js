@@ -28,18 +28,10 @@ const Nav = () => {
 
                                 <NavLink className='nav' to="/services">Services</NavLink>
 
-                                {/* <NavLink className='nav' to="/addServices">AddServices</NavLink> */}
+
+                                <NavLink className='nav' to="/placeorder">PlaceOrder</NavLink>
 
 
-
-                                {/* {user?.email && <NavLink className='nav' to="/dashboard">Dashboard</NavLink>} */}
-
-                                {/* {user?.email && <NavLink className='nav' to="/update">Update</NavLink>} */}
-
-                                {/* {user?.email && <NavLink className='nav' to={`update/${Services._id}`}>
-                                    Update
-
-                                </NavLink>} */}
 
 
 

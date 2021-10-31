@@ -81,9 +81,19 @@ const Services = () => {
                             <p>$ {service.price}</p>
                         </div>
                         <div class="card-footer">
+
+
+
+
+
                             <button className='btn-primary text-white div-btn'>
-                                <Link className='btn-deta' to={`/details/${service.id}`}> Details</Link>
+                                <Link className='btn-deta' to={`/details/${service._id}`}> Details</Link>
                             </button>
+
+
+
+
+
                             {user?.email && <button onClick={() => handleDelete(service._id)} className='btn-danger text-white m-2'>Delete</button>}
 
                             {user?.email && <Link to={`update/${service._id}`}>

@@ -1,17 +1,21 @@
 import { getAuth, createUserWithEmailAndPassword, signInWithEmailAndPassword, sendEmailVerification, updateProfile } from '@firebase/auth';
 import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useHistory, useLocation } from 'react-router-dom';
 
 import useAuth from '../../hooks/useAuth';
 
 import './Register.css'
 const Register = () => {
+    const { signInUsingGoogle } = useAuth();
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
     const [error, setError] = useState('');
     const [isLogin, setIsLogin] = useState(false);
     const [name, setName] = useState('');
+    const history = useHistory();
+    const location = useLocation();
     const auth = getAuth();
+    const redirect_uri = location.state?.from || '/home';
 
     const toggleLogin = (e) => {
         setIsLogin(e.target.checked)
@@ -48,7 +52,7 @@ const Register = () => {
                 setError(error.message);
             })
     }
-    const { signInUsingGoogle } = useAuth();
+
 
     const createNewUser = (email, password) => {
         createUserWithEmailAndPassword(auth, email, password)
@@ -71,6 +75,14 @@ const Register = () => {
             .then(result => {
                 console.log(result);
             })
+    }
+
+    const handleGoogleLogin = () => {
+        signInUsingGoogle()
+            .then(result => {
+                history.push(redirect_uri);
+            })
+
     }
 
     return (
@@ -116,7 +128,7 @@ const Register = () => {
                 <br /><br /><br />
                 ---------------------------
                 <br />
-                <button onClick={signInUsingGoogle} className='btn-primary mb-3 btn-google' >google Sign In</button>
+                <button onClick={handleGoogleLogin} className='btn-primary mb-3 btn-google' >google Sign In</button>
 
             </div>
 

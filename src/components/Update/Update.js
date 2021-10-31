@@ -9,7 +9,7 @@ import { useParams } from 'react-router';
 const Update = () => {
     const { serviceId } = useParams();
     const [singleService, setSingleService] = useState({})
-    const { register, handleSubmit, watch, formState: { errors } } = useForm();
+    const { register, handleSubmit, watch, reset, formState: { errors } } = useForm();
     useEffect(() => {
         fetch(`https://ghostly-labyrinth-89425.herokuapp.com/singleService/${serviceId}`)
             .then(res => res.json())
@@ -29,7 +29,8 @@ const Update = () => {
                 body: JSON.stringify(data),
             })
             .then(res => res.json())
-            .then(result => console.log(result));
+            .then(result => console.log(result))
+        reset();
     };
 
 
