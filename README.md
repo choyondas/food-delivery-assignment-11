@@ -1,10 +1,10 @@
-# HEALTH CARE HOSPITAL
+# FAST FOOD DELEVERY WEB
 
-Click [here](https://clinic-authentication.web.app/) to go to LIVE SITE. 
+Click [here](https://fir-first-project-395f1.web.app/) to go to LIVE SITE. 
 
 ### Description:
-- This is an Smart Hospital.
-- People can know recent news about our hospital.
-- they can see our specilize doctor and be familier with them.
-- they can book hospital seat online.
-- To see details information they have to login our website.
+- This is an Smart FAST FOOD app.
+- people can buy buy food and get it in short min.
+- to see food details people needs to sign in .
+- after sign in they can order food and place order.
+- after login login page will redirect to the details page.
