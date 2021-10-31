@@ -7,7 +7,7 @@ const Services = () => {
     const [services, setServices] = useState([]);
     const [isDeleted, setIsDeleted] = useState(null);
     useEffect(() => {
-        fetch('http://localhost:5000/services')
+        fetch('https://ghostly-labyrinth-89425.herokuapp.com/services')
             .then(res => res.json())
             .then(data => setServices(data))
     }, [isDeleted]);
@@ -16,7 +16,7 @@ const Services = () => {
 
     const handleDelete = (id) => {
 
-        fetch(`http://localhost:5000/deleteServices/${id}`, {
+        fetch(`https://ghostly-labyrinth-89425.herokuapp.com/deleteServices/${id}`, {
             method: 'DELETE',
             headers: { contentType: 'application/json' }
 
@@ -49,7 +49,7 @@ const Services = () => {
 
         // console.log(data.email)
 
-        fetch("http://localhost:5000/addOrder", {
+        fetch("https://ghostly-labyrinth-89425.herokuapp.com/addOrder", {
             method: "POST",
             headers: { contentType: "application/json" },
             body: JSON.stringify(data),

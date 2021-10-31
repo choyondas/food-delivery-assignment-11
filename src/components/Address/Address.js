@@ -8,7 +8,7 @@ const Address = () => {
 
     const [address, setAddress] = useState([])
     useEffect(() => {
-        fetch('http://localhost:5000/address')
+        fetch('https://ghostly-labyrinth-89425.herokuapp.com/address')
             .then(res => res.json())
             .then(data => setAddress(data));
     }, [])

@@ -11,14 +11,14 @@ const Update = () => {
     const [singleService, setSingleService] = useState({})
     const { register, handleSubmit, watch, formState: { errors } } = useForm();
     useEffect(() => {
-        fetch(`http://localhost:5000/singleService/${serviceId}`)
+        fetch(`https://ghostly-labyrinth-89425.herokuapp.com/singleService/${serviceId}`)
             .then(res => res.json())
             .then(data => setSingleService(data))
     }, []);
     const onSubmit = data => {
 
         console.log(data);
-        fetch(`http://localhost:5000/update/${serviceId}`,
+        fetch(`https://ghostly-labyrinth-89425.herokuapp.com/update/${serviceId}`,
             {
                 method: 'PUT',
                 headers: {

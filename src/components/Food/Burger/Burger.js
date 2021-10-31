@@ -9,7 +9,7 @@ const Burger = () => {
         console.log(data);
 
 
-        axios.post('http://localhost:5000/burgers', data)
+        axios.post('https://ghostly-labyrinth-89425.herokuapp.com/burgers', data)
             .then(res => {
                 if (res.data.insertedId) {
                     alert('added successfully');
@@ -23,7 +23,7 @@ const Burger = () => {
 
     const [burgers, setBurgers] = useState([])
     useEffect(() => {
-        fetch('http://localhost:5000/burgers')
+        fetch('https://ghostly-labyrinth-89425.herokuapp.com/burgers')
             .then(res => res.json())
             .then(data => setBurgers(data));
     }, [])

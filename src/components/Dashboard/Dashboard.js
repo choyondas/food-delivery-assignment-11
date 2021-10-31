@@ -3,7 +3,7 @@ import React, { useEffect } from 'react';
 const Dashboard = () => {
     const email = 'choyondas08@gmail.com'
     useEffect(() => {
-        fetch(`http://localhost:5000/myOrders/${email}`)
+        fetch(`https://ghostly-labyrinth-89425.herokuapp.com/myOrders/${email}`)
             .then(res => res.json())
             .then(data => console.log(data))
     }, [])

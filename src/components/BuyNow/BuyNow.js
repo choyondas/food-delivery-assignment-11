@@ -10,7 +10,7 @@ const BuyNow = () => {
     const { id } = useParams();
     const [burge, setBurge] = useState([])
     useEffect(() => {
-        fetch(`http://localhost:5000/burgers/${id}`)
+        fetch(`https://ghostly-labyrinth-89425.herokuapp.com/burgers/${id}`)
             .then(res => res.json())
             .then(data => setBurge(data))
 
@@ -25,7 +25,7 @@ const BuyNow = () => {
         console.log(data);
 
 
-        axios.post('http://localhost:5000/address', data)
+        axios.post('https://ghostly-labyrinth-89425.herokuapp.com/address', data)
             .then(res => {
                 if (res.data.insertedId) {
                     alert('added successfully');
