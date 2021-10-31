@@ -55,9 +55,9 @@ const Customer = () => {
                             </button>
                         </div>
 
-                        {/* <Link to="/placeholder">
+                        <Link to="/placeorder">
                             <button className="btn-primary">see the customer information</button>
-                        </Link> */}
+                        </Link>
                     </div>
                 </form>
             </div>
